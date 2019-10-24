@@ -6,7 +6,10 @@
 
 This simple make the code a tiny more clean. (See example's)
 
+
 ## Example
+
+[See demo here](https://codesandbox.io/s/hardcore-snow-jql32?fontsize=14) _(editable codesandbox.io)_
 
 ```ts
 import React, { FC } from 'react'
@@ -110,4 +113,3 @@ const MyComponent: FC = () => {
       </div>
    )
 }
-```
