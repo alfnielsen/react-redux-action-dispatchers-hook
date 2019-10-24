@@ -2,6 +2,8 @@
 
 rename back to CreateActionDispatchers
 
+Add demo (https://codesandbox.io/ link in README)
+
 ## 0.0.7
 
 rename CreateActionDispatchers to useCreateActionDispatchers
