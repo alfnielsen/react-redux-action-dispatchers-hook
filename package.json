@@ -1,6 +1,6 @@
 {
    "name": "react-redux-action-dispatchers-hook",
-   "version": "0.0.5",
+   "version": "0.0.7",
    "description": "transform action creators into action dispatchers",
    "keywords": [
       "react",

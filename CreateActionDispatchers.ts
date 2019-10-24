@@ -27,11 +27,7 @@ const CreateActionDispatchers = <
    actionCreatorMap: T
 ) => {
    const dispatch = useDispatch()
-   const memoDispatchActionsObject = useMemo(
-      () => TransformActions(dispatch, actionCreatorMap),
-      [TransformActions, dispatch, actionCreatorMap]
-   )
-   return memoDispatchActionsObject
+   return TransformActions(dispatch, actionCreatorMap)
 }
 
 export default CreateActionDispatchers
