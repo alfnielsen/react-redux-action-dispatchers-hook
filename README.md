@@ -4,7 +4,7 @@
 
 **Short:** `Transform action creators into action dispatchers`
 
-This simple make the code i tiny more clean. (See example's)
+This simple make the code a tiny more clean. (See example's)
 
 ## Example
 
