@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = require("react");
 const react_redux_1 = require("react-redux");
 exports.TransformActions = (dispatch, actionCreatorMap) => {
     const actionDispatcherMap = {};
@@ -10,10 +9,9 @@ exports.TransformActions = (dispatch, actionCreatorMap) => {
     }
     return actionDispatcherMap;
 };
-const CreateActionDispatchers = (actionCreatorMap) => {
+const useCreateActionDispatchers = (actionCreatorMap) => {
     const dispatch = react_redux_1.useDispatch();
-    const memoDispatchActionsObject = react_1.useMemo(() => exports.TransformActions(dispatch, actionCreatorMap), [exports.TransformActions, dispatch, actionCreatorMap]);
-    return memoDispatchActionsObject;
+    return exports.TransformActions(dispatch, actionCreatorMap);
 };
-exports.default = CreateActionDispatchers;
+exports.default = useCreateActionDispatchers;
 //# sourceMappingURL=CreateActionDispatchers.js.map

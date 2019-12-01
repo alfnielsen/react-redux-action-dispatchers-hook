@@ -1,34 +1,34 @@
 {
-   "name": "react-redux-action-dispatchers-hook",
-   "version": "0.0.8",
-   "description": "transform action creators into action dispatchers",
-   "keywords": [
-      "react",
-      "react-redux",
-      "action",
-      "dispatch",
-      "dispatcher",
-      "action-dispatcher",
-      "action-creator",
-      "redux",
-      "typescript"
-   ],
-   "publisher": "alfnielsen",
-   "main": "out/CreateActionDispatchers.js",
-   "types": "out/CreateActionDispatchers.d.ts",
-   "scripts": {
-      "build": "tsc --declaration"
-   },
-   "author": "",
-   "license": "ISC",
-   "homepage": "https://github.com/alfnielsen/react-redux-action-dispatchers-hook#readme",
-   "dependencies": {
-      "react": "^16.11.0",
-      "react-redux": "^7.1.1",
-      "redux": "^4.0.4"
-   },
-   "devDependencies": {
-      "@types/react": "^16.9.9",
-      "@types/react-redux": "^7.1.5"
-   }
+  "name": "react-redux-action-dispatchers-hook",
+  "version": "0.0.9",
+  "description": "transform action creators into action dispatchers",
+  "keywords": [
+    "react",
+    "react-redux",
+    "action",
+    "dispatch",
+    "dispatcher",
+    "action-dispatcher",
+    "action-creator",
+    "redux",
+    "typescript"
+  ],
+  "publisher": "alfnielsen",
+  "main": "out/CreateActionDispatchers.js",
+  "types": "out/CreateActionDispatchers.d.ts",
+  "scripts": {
+    "build": "tsc --declaration"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://github.com/alfnielsen/react-redux-action-dispatchers-hook#readme",
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-redux": "^7.1.5"
+  }
 }

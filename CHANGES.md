@@ -1,3 +1,20 @@
+## 0.0.9
+
+rebuild without useMemo and rename to useCreateActionDispatchers (again!)
+to try to follow the use hook rules fot linter.
+
+### Add useCreateArea
+
+Higher level method added: **useCreateArea**
+
+It does the same as **useCreateActionDispatchers**, but takes a second argument: **selector function**
+
+This will create a
+
+```ts
+const { ...properties, ...actions } = useMyHook();
+```
+
 ## 0.0.8
 
 rename back to CreateActionDispatchers

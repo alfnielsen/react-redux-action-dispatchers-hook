@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Dispatch } from 'redux'
 
 type IActionsMap<T extends Record<keyof T, (...args: any) => any>> = {
@@ -21,13 +21,31 @@ export const TransformActions = <
    return actionDispatcherMap
 }
 
-const CreateActionDispatchers = <
+export const useCreateArea = <
+   T extends Record<keyof T, (...args: any) => any>,
+   IStoreState,
+   IAreaState
+>(
+   actionCreatorMap: T,
+   selector: (state: IStoreState) => IAreaState
+) => {
+   const dispatch = useDispatch()
+   const properties = useSelector<IStoreState, IAreaState>(selector)
+   const transformedActions = TransformActions(dispatch, actionCreatorMap)
+   return {
+      ...properties,
+      ...transformedActions
+   }
+}
+
+const useCreateActionDispatchers = <
    T extends Record<keyof T, (...args: any) => any>
 >(
    actionCreatorMap: T
 ) => {
    const dispatch = useDispatch()
-   return TransformActions(dispatch, actionCreatorMap)
+   const transformedActions = TransformActions(dispatch, actionCreatorMap)
+   return transformedActions
 }
 
-export default CreateActionDispatchers
+export default useCreateActionDispatchers
