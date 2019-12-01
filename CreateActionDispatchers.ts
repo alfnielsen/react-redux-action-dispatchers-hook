@@ -24,10 +24,11 @@ export const TransformActions = <
 export const useCreateArea = <
    T extends Record<keyof T, (...args: any) => any>,
    IStoreState,
-   IAreaState
+   IAreaState,
+   TSelector extends (state: IStoreState) => IAreaState
 >(
    actionCreatorMap: T,
-   selector: (state: IStoreState) => IAreaState
+   selector: TSelector
 ) => {
    const dispatch = useDispatch()
    const properties = useSelector<IStoreState, IAreaState>(selector)

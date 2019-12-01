@@ -9,9 +9,16 @@ exports.TransformActions = (dispatch, actionCreatorMap) => {
     }
     return actionDispatcherMap;
 };
+exports.useCreateArea = (actionCreatorMap, selector) => {
+    const dispatch = react_redux_1.useDispatch();
+    const properties = react_redux_1.useSelector(selector);
+    const transformedActions = exports.TransformActions(dispatch, actionCreatorMap);
+    return Object.assign(Object.assign({}, properties), transformedActions);
+};
 const useCreateActionDispatchers = (actionCreatorMap) => {
     const dispatch = react_redux_1.useDispatch();
-    return exports.TransformActions(dispatch, actionCreatorMap);
+    const transformedActions = exports.TransformActions(dispatch, actionCreatorMap);
+    return transformedActions;
 };
 exports.default = useCreateActionDispatchers;
 //# sourceMappingURL=CreateActionDispatchers.js.map
